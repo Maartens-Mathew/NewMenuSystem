@@ -1,0 +1,25 @@
+﻿<Page x:Class="TestApp.Forms.Pages.DrinkPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestApp.Forms.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DrinkPage"
+      >
+
+    <Border CornerRadius="15"
+            Background="Red" >
+        <Grid>
+            <Button VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Width="120"
+                    Height="20"
+                    Content="Drink Page"
+                    Click="Button_Click"/>
+
+
+        </Grid>
+    </Border>
+</Page>
