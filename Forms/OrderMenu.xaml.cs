@@ -11,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TestApp.Forms.Pages;
 using TestApp.MVVM.ViewModels;
 
 namespace TestApp.Forms
@@ -19,16 +18,17 @@ namespace TestApp.Forms
     /// <summary>
     /// Interaction logic for OrderMenu.xaml
     /// </summary>
+    /// Background="#0a353d"
     public partial class OrderMenu : Window
     {
-        public DrinkPage DrinkInstance;
+        
         public static OrderMenu OrderInstance;
         public OrderMenu()
         {
             InitializeComponent();
             OrderInstance = this;
             currentFrame = new Frame();
-            DrinkInstance = new DrinkPage();
+         
         }
 
        

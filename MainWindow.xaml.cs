@@ -61,6 +61,11 @@ namespace TestApp
             bdrClose.Background = Brushes.Black;
         }
 
-
+        private void radExistingOrder_Checked(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            ExistingOrder ExistingWindow = new ExistingOrder();
+            ExistingWindow.Show();
+        }
     }
 }

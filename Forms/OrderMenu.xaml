@@ -8,11 +8,12 @@
         xmlns:views="clr-namespace:TestApp.MVVM.Views"
         mc:Ignorable="d"
         Title="OrderMenu" 
-        Height="550" 
-        Width="800"
+        Height="600" 
+        Width="900"
         AllowsTransparency="True"
         WindowStyle="None"
         Background="Transparent"
+        
         WindowStartupLocation="CenterScreen"
         >
 
@@ -33,7 +34,16 @@
 
     <Grid>
         <Border CornerRadius="15"
-            Background="#0a353d">
+            >
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,2"
+                                     EndPoint="1,1">
+                    <GradientStop Color="#0c375d" Offset="0.1"    />
+                    <GradientStop Color="Teal"  Offset="1.5" />
+
+                </LinearGradientBrush>
+            </Border.Background>
+           
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*" />

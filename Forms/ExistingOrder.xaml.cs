@@ -10,25 +10,29 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TestApp.Forms.Pages
+namespace TestApp.Forms
 {
     /// <summary>
-    /// Interaction logic for DrinkPage.xaml
+    /// Interaction logic for ExistingOrder.xaml
     /// </summary>
-    public partial class DrinkPage : Page
+    public partial class ExistingOrder : Window
     {
-        public DrinkPage()
+        public ExistingOrder()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("This is the drinks page");
-            
+            this.Close();
+            MainWindow.Instance.Show();
+        }
+
+        private void Label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            bdrClose.Background = Brushes.Black;
         }
     }
 }
