@@ -63,9 +63,10 @@ namespace TestApp
 
         private void radExistingOrder_Checked(object sender, RoutedEventArgs e)
         {
-            this.Hide();
-            ExistingOrder ExistingWindow = new ExistingOrder();
-            ExistingWindow.Show();
+           // this.Hide();
+            WaitronSelector waitronWindow = new WaitronSelector();
+            waitronWindow.Show();
+            this.IsEnabled = false;
         }
     }
 }

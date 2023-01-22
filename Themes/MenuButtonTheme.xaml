@@ -6,44 +6,44 @@
            x:Key="MenuButtonTheme">
 
         <Style.Setters>
-            
+
             <Setter Property="Template">
-                
+
                 <Setter.Value>
                     <ControlTemplate TargetType="RadioButton">
 
                         <Border CornerRadius="10" Background="Transparent">
-                        <Grid VerticalAlignment="Stretch" 
+                            <Grid VerticalAlignment="Stretch" 
                               HorizontalAlignment="Stretch"
                               
                               Background="{TemplateBinding Background}">
 
-                            
 
-                            <TextBlock Text="{TemplateBinding Property=Content}"                                   
+
+                                <TextBlock Text="{TemplateBinding Property=Content}"                                   
                                        VerticalAlignment="Center"
                                        
                                        
                                        
                                        Margin="25,0,0,0" />
 
-                            
 
 
 
-                        </Grid>
+
+                            </Grid>
                         </Border>
 
                     </ControlTemplate>
-                    
-                    
+
+
                 </Setter.Value>
-                
+
             </Setter>
 
             <Setter Property="Background" Value="Transparent" />
             <Setter Property="BorderThickness" Value="0" />
-          
+
 
         </Style.Setters>
 
@@ -51,10 +51,12 @@
             <Trigger Property="IsChecked" Value="True">
                 <Setter Property="Background" Value="#22202f" />
             </Trigger>
-                     
+
         </Style.Triggers>
-        
-        
+
+
+
+
     </Style>
-    
+
 </ResourceDictionary>

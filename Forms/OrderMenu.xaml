@@ -104,7 +104,7 @@
                     Height="50"
                     Foreground="White"
                     FontSize="14"
-                    Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_3" 
+                    Style="{StaticResource MenuButtonTheme}" 
                     />
 
 

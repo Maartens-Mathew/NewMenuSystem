@@ -27,7 +27,7 @@ namespace TestApp.Forms
         {
             InitializeComponent();
             OrderInstance = this;
-            currentFrame = new Frame();
+            
          
         }
 
@@ -62,7 +62,7 @@ namespace TestApp.Forms
 
         private void RadioButton_Checked_3(object sender, RoutedEventArgs e)
         {
-            this.WindowState = WindowState.Maximized;
+            
             
         }
     }
