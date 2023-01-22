@@ -68,5 +68,13 @@ namespace TestApp
             waitronWindow.Show();
             this.IsEnabled = false;
         }
+
+
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            this.IsEnabled = true;
+            radExistingOrder.IsChecked = false;
+        }
     }
 }

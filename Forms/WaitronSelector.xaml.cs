@@ -19,6 +19,7 @@ namespace TestApp.Forms
     /// </summary>
     public partial class WaitronSelector : Window
     {
+        public static ExistingOrder Instance;
         public WaitronSelector()
         {
             InitializeComponent();
@@ -52,6 +53,14 @@ namespace TestApp.Forms
             MainWindow.Instance.Show();
             MainWindow.Instance.IsEnabled = true;
             this.Close();
+        }
+
+        private void Border_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+            Instance = new ExistingOrder();
+            Instance.Show();
+
         }
     }
 }

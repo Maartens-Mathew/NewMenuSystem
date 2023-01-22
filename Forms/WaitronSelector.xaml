@@ -43,8 +43,7 @@
                     Margin="0,0,0,100">
 
                 <ComboBox VerticalAlignment="Center"
-                          Background="Transparent"
-                          Foreground="Transparent"
+                     HorizontalContentAlignment="Center"
                  HorizontalAlignment="Left"
                  Width="140"
                  Height="25"
@@ -57,7 +56,7 @@
                     HorizontalAlignment="Center"
                 Height="35"
                 CornerRadius="15"
-                    Background="Teal">
+                    Background="Teal" MouseUp="Border_MouseUp">
 
 
                 <TextBlock Text="Select Waitron"
