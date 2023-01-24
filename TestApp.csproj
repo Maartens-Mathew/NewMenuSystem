@@ -79,6 +79,7 @@
     <Compile Include="Forms\ExistingOrder.xaml.cs">
       <DependentUpon>ExistingOrder.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\NavigationClasses\ShowEnable.cs" />
     <Compile Include="Forms\OrderMenu.xaml.cs">
       <DependentUpon>OrderMenu.xaml</DependentUpon>
     </Compile>

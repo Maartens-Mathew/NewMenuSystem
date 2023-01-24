@@ -3,7 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TestApp.Forms"
+        xmlns:local="clr-namespace:TestApp.Forms" xmlns:views="clr-namespace:TestApp.MVVM.Views"
+                xmlns:viewmodels="clr-namespace:TestApp.MVVM.ViewModels"
+        
         mc:Ignorable="d"
         Title="ExistingOrder" 
         Height="600" 
@@ -12,6 +14,21 @@
         WindowStyle="None"
         Background="Transparent"
         WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <DataTemplate x:Name="DrinksViewTemplate" DataType="{x:Type viewmodels:DrinksViewModel}">
+            <views:DrinksView DataContext="{Binding}" />
+        </DataTemplate>
+
+        <DataTemplate x:Name="FoodsViewTemplate" DataType="{x:Type viewmodels:FoodsViewModel}">
+            <views:FoodsView DataContext="{Binding}" />
+        </DataTemplate>
+
+        <DataTemplate x:Name="BeveragesViewTemplate" DataType="{x:Type viewmodels:BeveragesViewModel}">
+            <views:BeveragesView DataContext="{Binding}" />
+        </DataTemplate>
+
+    </Window.Resources>
 
     <Border CornerRadius="15"
             >
@@ -22,46 +39,130 @@
                 <GradientStop Color="#01698f" Offset="0.9"/>
             </LinearGradientBrush>
         </Border.Background>
+        
+        
     <Grid>
 
 
-        
-        <Grid.ColumnDefinitions>
-            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="10*" />
 
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-         
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="2*" />
 
             </Grid.RowDefinitions>
 
+            <Label Grid.Column="0"
+                       Grid.Row="0"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Content="Existing Order Page"
+                       Foreground="White"
+                       FontSize="20"/>
 
-            <Border 
-                        
+
+
+            <StackPanel Grid.Row="1">
+
+
+
+                <RadioButton 
+                    Content="Drinks"
+                    Height="50"
+                    Foreground="White"
+                    FontSize="14"
+                    Style="{StaticResource MenuButtonTheme}"
+                    IsChecked="True"
+                    Checked="RadioButton_Checked" 
+                    
+                    />
+
+
+
+
+                <RadioButton 
+                    Content="Foods"
+                    Height="50"
+                    Foreground="White"            
+                    FontSize="14"
+                    Style="{StaticResource MenuButtonTheme}"
+                            Checked="RadioButton_Checked_1"
+                    
+                    />
+
+
+                <RadioButton 
+                    Content="Beverages"
+                    Height="50"
+                    Foreground="White"
+                    FontSize="14"
+                    Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_2"
+                    
+                    />
+
+
+                <RadioButton 
+                    Content="Back"
+                    Height="50"
+                    Foreground="White"
+                    FontSize="14"
+                    Style="{StaticResource MenuButtonTheme}" 
+                    />
+
+
+
+
+
+
+
+
+
+            </StackPanel>
+
+
+
+
+
+            <Border Grid.Column="1"
+                        Grid.Row="2"
                         Height="40"
                         Width="130"
                         VerticalAlignment="Bottom"
                         HorizontalAlignment="Right"
-                        Margin="0,0,10,10"
+                        Margin="0,0,25,25"
                         CornerRadius="5"
                         Background="#012119"
-                        x:Name="bdrClose"
+                        
                         
                         >
                 <Label Content="Back" 
-                   Name="lblBack"
                            VerticalContentAlignment="Center"
                            HorizontalContentAlignment="Center"
                            Foreground="White" 
                            MouseLeftButtonUp="Label_MouseLeftButtonUp"
-                           MouseLeftButtonDown="Label_MouseLeftButtonDown" HorizontalAlignment="Right" Width="130"
+                           MouseLeftButtonDown="Label_MouseLeftButtonDown" HorizontalAlignment="Center" Width="130" Height="40" VerticalAlignment="Top"
                            
                            
                            />
 
 
             </Border>
+
+            <Frame x:Name="currentFrame" 
+                       NavigationUIVisibility="Hidden" 
+                       Margin="10,10,10,10" 
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       Content="{Binding}"
+                       
+                       BorderBrush="Transparent"  />
+
         </Grid>
+        
     </Border>
 </Window>

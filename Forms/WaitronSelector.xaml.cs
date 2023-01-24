@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TestApp.Forms.NavigationClasses;
 
 namespace TestApp.Forms
 {
@@ -19,7 +20,7 @@ namespace TestApp.Forms
     /// </summary>
     public partial class WaitronSelector : Window
     {
-        public static ExistingOrder Instance;
+        public static ExistingOrder ExistingWindow;
         public WaitronSelector()
         {
             InitializeComponent();
@@ -49,17 +50,16 @@ namespace TestApp.Forms
         }
 
         private void TextBlock_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            MainWindow.Instance.Show();
-            MainWindow.Instance.IsEnabled = true;
-            this.Close();
+        {                  
+            ShowEnable toMain = new ShowEnable(this, MainWindow.Instance);
+            toMain.ChangeToMain();
         }
 
         private void Border_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            this.Close();
-            Instance = new ExistingOrder();
-            Instance.Show();
+        {          
+            ExistingWindow = new ExistingOrder();                      
+            ShowEnable toExisting = new ShowEnable(this, ExistingWindow);
+            toExisting.ChangeForms();
 
         }
     }

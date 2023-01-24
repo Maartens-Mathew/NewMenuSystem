@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TestApp.Forms;
+using TestApp.Forms.NavigationClasses;
 
 namespace TestApp
 {
@@ -23,8 +24,9 @@ namespace TestApp
     public partial class MainWindow : Window
     {
         public static MainWindow Instance;
-        Color lightBlue = new Color();
-        Color darkBlue = new Color();
+        public static WaitronSelector waitronWindow;
+        
+
 
 
         public MainWindow()
@@ -32,17 +34,16 @@ namespace TestApp
             InitializeComponent();
             Instance = this;
             
-            lightBlue = Color.FromRgb(10, 53, 61);  
-            darkBlue = Color.FromRgb(7, 36, 41);
+
         }
 
         
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
-            OrderMenu orderMenu = new OrderMenu();
-            orderMenu.Show();
+        {           
+            OrderMenu orderMenu = new OrderMenu();          
+            ShowEnable toNewOrder = new ShowEnable(this, orderMenu);
+            toNewOrder.ChangeFromMain();
 
         }
 
@@ -63,18 +64,14 @@ namespace TestApp
 
         private void radExistingOrder_Checked(object sender, RoutedEventArgs e)
         {
-           // this.Hide();
-            WaitronSelector waitronWindow = new WaitronSelector();
-            waitronWindow.Show();
-            this.IsEnabled = false;
+           
+            waitronWindow = new WaitronSelector();              
+            ShowEnable toWaitron = new ShowEnable(this, waitronWindow);
+            toWaitron.ChangeFromMainVisible();
         }
 
 
 
-        private void Window_Activated(object sender, EventArgs e)
-        {
-            this.IsEnabled = true;
-            radExistingOrder.IsChecked = false;
-        }
+        
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TestApp.Forms"
         mc:Ignorable="d"
         Title="WaitronSelector" 
-        Height="240" 
+        Height="219" 
         Width="252"
         AllowsTransparency="True"
         Background="Transparent"
@@ -18,16 +18,17 @@
 
 
     <Border CornerRadius="15"
-            Background="#0c375d">
+            >
+
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,1"
+                                 EndPoint="1,0">
+                <GradientStop Color="#01698f" Offset="0.2"/>
+                <GradientStop Color="#0c375d" Offset="0.9"/>
+            </LinearGradientBrush>
+        </Border.Background>
         <Grid  HorizontalAlignment="Center" Width="248">
-            <Grid.ColumnDefinitions>
 
-
-            </Grid.ColumnDefinitions>
-
-            <Grid.RowDefinitions>
-
-            </Grid.RowDefinitions>
 
             <TextBlock VerticalAlignment="Top"
                    HorizontalAlignment="Left"
@@ -40,7 +41,7 @@
                     Width="150"
                     CornerRadius="10"
                     
-                    Margin="0,0,0,100">
+                    Margin="49,60,49,135">
 
                 <ComboBox VerticalAlignment="Center"
                      HorizontalContentAlignment="Center"
@@ -52,11 +53,11 @@
             </Border>
 
             <Border Width="120"
-                    VerticalAlignment="Center"
+                    VerticalAlignment="Top"
                     HorizontalAlignment="Center"
                 Height="35"
                 CornerRadius="15"
-                    Background="Teal" MouseUp="Border_MouseUp">
+                    Background="Teal" MouseUp="Border_MouseUp" Margin="0,109,0,0">
 
 
                 <TextBlock Text="Select Waitron"

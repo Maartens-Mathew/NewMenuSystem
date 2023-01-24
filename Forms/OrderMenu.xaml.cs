@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TestApp.Forms.NavigationClasses;
 using TestApp.MVVM.ViewModels;
 
 namespace TestApp.Forms
@@ -22,11 +23,11 @@ namespace TestApp.Forms
     public partial class OrderMenu : Window
     {
         
-        public static OrderMenu OrderInstance;
+        public static OrderMenu OrderWindow;
         public OrderMenu()
         {
             InitializeComponent();
-            OrderInstance = this;
+            OrderWindow = this;
             
          
         }
@@ -35,8 +36,8 @@ namespace TestApp.Forms
 
         private void Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            this.Close();
-            MainWindow.Instance.Show();
+            ShowEnable toMain = new ShowEnable(this,MainWindow.Instance);
+            toMain.ChangeToMain();
         }
 
         private void Label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
