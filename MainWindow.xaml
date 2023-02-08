@@ -21,16 +21,11 @@
 
 
     <Border CornerRadius="10"
+            
             >
 
-        <Border.Background>
-            <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-                <GradientStop Color="CornflowerBlue" Offset="1" />
-                <GradientStop Color="#4a353d" Offset="0.2" />
-            </LinearGradientBrush>
             
             
-        </Border.Background>
         
         
         <Grid>
