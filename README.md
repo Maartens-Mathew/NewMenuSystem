@@ -1,90 +1,93 @@
-# NewMenuSystem
+# 🍔 NewMenuSystem 🍹
 
-A WPF-based food and drinks menu ordering system designed for restaurants, built with C#, XAML, and the MVVM architectural pattern.
+Welcome to **NewMenuSystem** – a WPF-powered food & drinks menu ordering system designed to level up the modern dining experience!  
+This was my first solo adventure in C# and WPF (with a splash of XAML) and turned out to be a fantastic journey into multi-layered architecture, MVVM, and a little taste of Microsoft Access database wizardry.
 
-## Project Overview
+---
 
-**NewMenuSystem** is a desktop application intended for waitrons to capture and manage customer orders on a device. This project represents a personal learning milestone, functioning as my first solo development effort in C# and WPF, and provided hands-on experience with architectural layering and the MVVM pattern.
+## 🎯 Project Goals
 
-Key goals and features:
-- Device-based order entry for food and drinks
-- UI crafted with WPF and XAML for a modern desktop experience
-- MVVM structure enabling separation of concerns and maintainability
-- Microsoft Access database connectivity
+- 📱 Enable waitrons to capture food & drink orders directly on a device
+- 👨‍💻 Explore & implement WPF (XAML) and C# in a real-world scenario
+- 🗂️ Connect seamlessly to a Microsoft Access database  
+- 🏛️ Apply, experiment, and learn the powerful **MVVM architectural pattern**
 
-Although the application did not progress beyond initial features, it remains a complete example of an MVVM-patterned, data-driven WPF application.
+---
 
-## Features
+## 🏗️ Features
 
-- **Menu and Order Capture:** Interfaces dedicated for ordering and managing existing orders.
-- **Waitron Selector:** UI portion allowing staff selection and order allocation.
-- **Navigation:** Simple modular structure, using navigation classes, to decouple different forms and functionalities.
-- **Styling:** Custom themes for menu buttons and core UI elements.
-- **Database Access:** Connection and read/write support for a Microsoft Access database.
+- 🍽️ **Order Entry:** Easy UI forms for creating and managing customer orders  
+- 🙋 **Waitron Selector:** Pick your server for more personalized service  
+- 🔀 **Smooth Navigation:** Modular navigation classes to keep things tidy  
+- 🎨 **Theming:** Custom theme files for menu buttons so it looks as good as it works  
+- ⚡ **Data-Driven:** CRUD operations through a connected Access database
 
-## Technology Stack
+---
 
-- **Language:** C#
-- **UI Framework:** WPF with XAML
-- **Architecture:** MVVM (Model-View-ViewModel)
-- **Database:** Microsoft Access
+## ⚙️ Tech Stack
 
-## Project Structure
+- **Language:** C#  
+- **UI:** WPF (with XAML)  
+- **Architecture:** MVVM  
+- **Database:** Microsoft Access  
+
+---
+
+## 🗂️ Project Structure
 
 ```
-├── App.config, App.xaml, App.xaml.cs
-├── MainWindow.xaml, MainWindow.xaml.cs
+├── App.config / App.xaml / App.xaml.cs
+├── MainWindow.xaml / MainWindow.xaml.cs
 ├── Forms/
-│   ├── ExistingOrder.xaml (+.cs)
-│   ├── OrderMenu.xaml (+.cs)
-│   ├── WaitronSelector.xaml (+.cs)
+│   ├── ExistingOrder.xaml(+.cs)
+│   ├── OrderMenu.xaml(+.cs)
+│   ├── WaitronSelector.xaml(+.cs)
 │   └── NavigationClasses/
 ├── MVVM/
 │   ├── ViewModels/
 │   └── Views/
-├── Properties/
-│   ├── AssemblyInfo.cs
-│   ├── Resources.Designer.cs / Resources.resx
-│   ├── Settings.Designer.cs / Settings.settings
-├── Themes/
-│   └── MenuButtonTheme.xaml
-├── TestApp.csproj, TestApp.sln
+├── Properties/ (AssemblyInfo, Resources, Settings)
+├── Themes/ (MenuButtonTheme.xaml)
+├── TestApp.csproj / TestApp.sln
 ```
-- Most business and UI logic is separated into `Forms` and `MVVM` directories.
-- Reusable styles are placed in `Themes/MenuButtonTheme.xaml`.
-- The `Properties` folder contains project configuration and resource files.
+_💡 Major files keep UI, business logic, and resources separated for clarity and maintainability._
 
-## Getting Started
+---
 
-1. **Clone the repository:**
+## 🚀 Getting Started
+
+1. **Clone the repo:**  
    ```bash
    git clone https://github.com/Maartens-Mathew/NewMenuSystem.git
    ```
 
-2. **Requirements:**
-   - Visual Studio 2017+ (with .NET desktop development workload)
-   - Microsoft Access (for database file, not bundled in repo)
+2. **Pre-requisites:**  
+   - Visual Studio 2017+  
+   - .NET desktop workload  
+   - Microsoft Access (for database; not included)
 
-3. **Build & Run:**
-   - Open `TestApp.sln` in Visual Studio.
-   - Restore NuGet packages (if needed), then build and run the project.
+3. **Build & Run:**  
+   - Open `TestApp.sln` in Visual Studio  
+   - Restore all NuGet packages  
+   - Build and press F5!
 
-4. **Database Configuration:**
-   - Ensure an Access database with the required schema is present and the connection string in `App.config` is updated.
-
-## Screenshots
-
-_Add your screenshots here to showcase the UI!_
-
-## Acknowledgements
-
-- Inspired by modern POS and restaurant management needs.
-- Developed as an educational project focused on practical implementation of MVVM and WPF.
-
-## License
-
-This project is provided as-is for learning and demonstration purposes. Adapt freely!
+4. **Database Setup:**  
+   - Place your Access DB file as needed  
+   - Edit your `App.config` for the connection string
 
 ---
 
-> Developed by [Maartens-Mathew](https://github.com/Maartens-Mathew)
+## 🙏 Acknowledgements
+
+- Inspired by real-world restaurant needs and a hunger for learning tech.
+- Special nod to [Microsoft Access](https://www.microsoft.com/en-us/microsoft-365/access) for being a surprisingly handy DB.
+
+---
+
+## 📃 License
+
+Project is free for learning and demo use!  
+
+---
+
+🛠️ Made with passion, caffeine, and curiosity by [Maartens-Mathew](https://github.com/Maartens-Mathew)
