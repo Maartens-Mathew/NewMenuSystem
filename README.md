@@ -84,12 +84,6 @@ Although the application did not progress beyond initial features, it remains a 
 
 ---
 
-## 🖼️ Screenshots
-
-_Add your screenshots here to showcase the UI!_
-
----
-
 ## 🙏 Acknowledgements
 
 - Inspired by modern POS and restaurant management needs.
